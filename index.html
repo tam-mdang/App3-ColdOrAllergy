@@ -153,8 +153,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <!-- adding the results page -->
 <div class="page" id=results">
-	var resultText = document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" +coldPercent;
-			 
+	<script>
+	var resultText = document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
+	Probability it is a cold =" +coldPercent;
+	</script>	 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
