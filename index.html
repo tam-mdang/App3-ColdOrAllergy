@@ -139,7 +139,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
-<!-- adding in my own question and answer buttons -->
+<!-- adding in my own questions and answer buttons -->
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
@@ -147,8 +147,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have body aches?</p>
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div>
+	
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Is the weather warm?</p>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
 		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
 <!-- adding the results page -->
@@ -158,8 +169,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 						</div>
 						
 	<div id="content" class="w3-container">
-		<a href="#results" onclick="var resultText = document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
-	Probability it is a cold =" +coldPercent;" class="w3-btn w3-grey w3-round"> Results </a> 
+		<a href="#results" onclick="var resultText = document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" +coldPercent;" class="w3-btn w3-grey w3-round">Results</a> 
 										  </div>
 										  
 <footer class="w3-bottom w3-container w3-flat-carrot">
