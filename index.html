@@ -81,7 +81,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might have a cold but wonder if it is allergies? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -146,11 +146,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Is the weather cold?</p>
-		<a href="#six" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<p>Do you have body aches?</p>
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
 	
+<!-- adding the results page -->
+<div class="page" id=results">
+	var resultText = document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" +coldPercent;
+			 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
