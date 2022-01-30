@@ -49,11 +49,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
-	function getResults(){
-		var allergyPercent = 100 * ((allergy_count)/6);
-		var coldPercent = 100 * ((cold_count)/6);
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	function calculateResults(){
+		var allergyPercent = 100 * ((allergy_count)/6); //added a function that calculates the probability of having allergies//
+		var coldPercent = 100 * ((cold_count)/6); //added a function that calculates the probability of having a cold//
+		var resultText = document.getElementById("results"); //added a function that returns a results element//
+		resultText.innerHTML = Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; //used html to display text that summarizes the probability of having allergies or a cold//
 	}
 	
   </script>
@@ -102,81 +102,80 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-		<!-- adding in the first question and answer buttons -->
-        <p>Are your eyes watery or itchy?</p>  
-		<a href="#two" onclick="allergyAdd();" class="w3-button w3-round-large w3-indigo">Yes</a>
-		<a href="#two" onclick="coldAdd();" class="w3-button w3-round-large w3-indigo">No</a>
-    	</div><!-- /content -->
+        <p>Are your eyes watery or itchy?</p> <!-- added the first question -->
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 2nd page and increase the allergy count by one when clicked -->
+		<a href="#two" onclick="coldAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 2nd page and increase the cold count by one when clicked -->
+    	</div> <!-- end division for main content -->
 </div>
 
-<div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
-	</div>
+<div class="page" id="two"> <!-- begin division for page two -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 2</h1> <!-- applied header one for question 2 -->
+	</div> <!-- end division for header -->
 	
-	<div id="content" class="w3-container">
-		<!-- adding in the second question and answer buttons -->
-		<p>Do you have a fever?</p>
-		<a href="#three" onclick="coldAdd();" class="w3-button w3-round-large w3-indigo">Yes</a>
-		<a href="#three" onclick="allergyAdd();" class="w3-button w3-round-large w3-indigo">No</a>
-	</div>
-</div>	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Do you have a fever?</p> <!-- added the second question -->
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 3rd page and increase the cold count by one when clicked -->
+		<a href="#three" onclick="allergyAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 3rd page and increase the allergy count by one when clicked -->
+	</div> <!-- end division for main content -->
+</div> <!-- end division for page two -->
+	
+<div class="page" id="three"> <!-- begin division for page three -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 3</h1> <!-- applied header one for question 3 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Do you have a sore throat?</p> <!-- added the third question -->
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 4th page and increase the cold count by one when clicked -->
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 4th page and increase the allergy count by one when clicked -->
+	</div> <!-- end division for main content -->
+</div> <!-- end division for page three -->
+	
+<div class="page" id="four"> <!-- begin division for page four -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 4</h1> <!-- applied header one for question 4 -->
+	</div> <!-- end division for header -->
+	
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Are your symptoms seasonal or chronic?</p> <!-- added the fourth question -->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 5th page and increase the allergy count by one when clicked -->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 5th page and increase the cold count by one when clicked -->
+	</div> <!-- end division for content -->
+</div> <!-- end division for page four -->
 
-<!-- adding in the third question content and answer buttons -->	
-<div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
-	</div>
+<div class="page" id="five"> <!-- begin division for page five -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 5</h1> <!-- applied header one for question 5 -->
+	</div> <!-- end division for header -->
 	
-	<div id="content" class="w3-container">
-		<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="coldAdd();" class="w3-button w3-round-large w3-indigo">Yes</a>
-		<a href="#four" onclick="allergyAdd();" class="w3-button w3-round-large w3-indigo">No</a>
-	</div>
-
-<!-- adding in the fourth question content and answer buttons -->
-<div class="page" id="four">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
-	</div>
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Do you have body aches?</p> <!-- added the fifth question -->
+		<a href="#six" onclick="coldAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the 6th page and increase the cold count by one when clicked -->
+		<a href="#six" onclick="allergyAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the 6th page and increase the allergy count by one when clicked -->
+	</div> <!-- end division for content -->
+</div> <!-- end division for page five -->
 	
-	<div id="content" class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd();" class="w3-button w3-round-large w3-indigo">Yes</a>
-		<a href="#five" onclick="coldAdd();" class="w3-button w3-round-large w3-indigo">No</a>
-	</div>
+<div class="page" id="six"> <!-- begin division for page six -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Question 6</h1> <!-- applied header one for question 6 -->
+	</div> <!-- end division for header -->
 	
-<!-- adding in my own questions and answer buttons -->
-<div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 5</h1>
-	</div>
+	<div id="content" class="w3-container"> <!-- added divider for main content to be placed between the header and footer -->
+		<p>Is the weather warm?</p> <!-- added the sixth question -->
+		<a href="#results" onclick="allergyAdd();" class="w3-btn w3-round-large w3-indigo">Yes</a> <!-- added the yes button that will lead to the results page and increase the allergy count by one when clicked -->
+		<a href="#results" onclick="coldAdd();" class="w3-btn w3-round-large w3-indigo">No</a> <!-- added the no button that will lead to the results page and increase the cold count by one when clicked -->
+	</div> <!-- end division for main content -->
+</div> <!-- end division for page six -->
 	
-	<div id="content" class="w3-container">
-		<p>Do you have body aches?</p>
-		<a href="#six" onclick="coldAdd();" class="w3-button w3-round-large w3-indigo">Yes</a>
-		<a href="#six" onclick="allergyAdd();" class="w3-button w3-round-large w3-indigo">No</a>
-	</div>
+<div class="page" id="results"> <!-- begin division for results page -->
+	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
+		<h1>Results</h1> <!-- applied header one for results -->
+		</div> <!-- end division for header -->
 	
-<div class="page" id="six">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 6</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-		<p>Is the weather warm?</p>
-		<a href="#results" onclick="allergyAdd();" class="w3-button w3-round-large w3-indigo">Yes</a>
-		<a href="#results" onclick="coldAdd();" class="w3-button w3-round-large w3-indigo">No</a>
-	</div>
-	
-<!-- adding the results page -->
-<div class="page" id="results">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-						</div>
-	<p id="results"></p>		
-		<a onclick="calculateResults();" class="w3-btn w3-grey w3-round">Get Results</a>
-	</div>
+	<p id="results"></p> <!-- created new paragraph for results -->
+		<a onclick="calculateResults();" class="w3-btn w3-grey w3-round">Get Results</a> <!-- added the Get Results button that will calculate the probability results when clicked -->
+</div> <!-- end division for results page -->
 										  
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
