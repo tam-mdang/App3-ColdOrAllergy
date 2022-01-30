@@ -49,7 +49,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
-	function calculateResults(){
+	function calculateResults(){ //added a function that will calculate various results//
 		var allergyPercent = 100 * ((allergy_count)/6); //added a function that calculates the probability of having allergies//
 		var coldPercent = 100 * ((cold_count)/6); //added a function that calculates the probability of having a cold//
 		var resultText = document.getElementById("results"); //added a function that returns a results element//
@@ -168,14 +168,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div> <!-- end division for main content -->
 </div> <!-- end division for page six -->
 	
-<div class="page" id="results"> <!-- begin division for results page -->
+<div class="page" id="seven"> <!-- begin division for page seven -->
 	<div class="w3-container w3-flat-carrot"> <!-- begin division for header -->
 		<h1>Results</h1> <!-- applied header one for results -->
 		</div> <!-- end division for header -->
 	
 	<p id="results"></p> <!-- created new paragraph for results -->
-		<a onclick="calculateResults();" class="w3-btn w3-grey w3-round">Get Results</a> <!-- added the Get Results button that will calculate the probability results when clicked -->
-</div> <!-- end division for results page -->
+		<a onclick="calculateResults();" class="w3-btn w3-grey w3-round"> Get Results</a> <!-- added the Get Results button that will calculate the probability results when clicked -->
+	</div> <!-- end division for results page -->
 										  
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
